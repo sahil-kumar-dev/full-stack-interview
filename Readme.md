@@ -1,4 +1,14 @@
-### Version Control Systems (Git + GitHub)
+# Full Stack Web Development Interview Questions
+
+## Table of Contents
+1. [HTML](#html-5)
+2. [CSS](#css)
+3. [JavaScript](#javascript)
+5. [React.js](#react)
+4. [Node.js](#node-js)
+7. [Databases](#database)
+
+# Version Control Systems (Git + GitHub)
 
 Version Control Systems (VCS) are a category of software tools that help a software team manage changes to source code over time. VCS tools include Subversion, Git, Mercurial, Bazaar, and others. They can be used to store and manage any kind of information, but they are often used to store source code of software projects.
 
@@ -7,6 +17,8 @@ Git is a free and open source distributed version control system. It is designed
 
 #### GitHub
 GitHub is a web-based platform for version control and collaboration. It allows developers to host and share their code with others, and provides features such as issue tracking, project management, and collaboration tools.
+
+# Network
 
 #### TCP/IP
 TCP/IP (Transmission Control Protocol/Internet Protocol) is a suite of communication protocols used to interconnect network devices on the internet. It is a set of rules and protocols that govern how data is transmitted over the internet.
@@ -46,7 +58,7 @@ HTTPS (Hypertext Transfer Protocol Secure) is an extension of HTTP. It is used f
 * CSS (Cascading Style Sheets) Vulnerabilities: CSS can be used to exploit security vulnerabilities in web applications. This can include attacks such as Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF).
 * Injection Vulnerabilities: Injection vulnerabilities occur when untrusted data is sent to an interpreter as part of a command or query. This can include SQL injection, LDAP injection, and XPath injection.
 
-#### RESTful APIs
+# RESTful APIs
 RESTful APIs are a set of rules and conventions for building and consuming web services. They are based on the principles of Representational State Transfer (REST), which is an architectural style for designing networked applications.
 
 The key features of RESTful APIs include:
@@ -348,7 +360,7 @@ Specificity refers to the order in which CSS rules are applied to an element.
 
 # JAVASCRIPT
 
-// Execution Context
+## Execution Context
 The execution context is the environment in which the JavaScript code is executed. It consists of the call stack and the memory heap.
 
 ```javascript
@@ -360,7 +372,7 @@ function greet() {
 greet();
 ```
 
-// Data Types
+## Data Types
 JavaScript has several data types, including:
 
 * Number: A numeric value, e.g. `42`
@@ -383,7 +395,7 @@ var str = "hello";
 console.log(typeof str); // Output: "string"
 ```
 
-// Operators
+## Operators
 JavaScript has several operators, including:
 
 * Arithmetic operators: `+`, `-`, `*`, `/`, `%`, etc.
@@ -400,7 +412,7 @@ console.log(a + b); // Output: 7
 console.log(a > b); // Output: true
 ```
 
-// Scope and Scope Chain
+## Scope and Scope Chain
 The scope of a variable is the region of the code where the variable is defined. The scope chain is the sequence of scopes that are searched to find a variable.
 
 ```javascript
@@ -418,7 +430,7 @@ console.log(a); // Output: 5
 console.log(b); // Error: b is not defined
 ```
 
-// Object Prototypes
+## Object Prototypes
 In JavaScript, every object has a prototype, which is another object that provides properties and methods to the original object.
 
 ```javascript
@@ -434,7 +446,7 @@ var person = {
 person.greet(); // Output: "Hello, my name is John and I am 30 years old."
 ```
 
-// Type Coercion
+## Type Coercion
 Type coercion is the process of converting a value from one data type to another.
 
 ```javascript
@@ -445,7 +457,7 @@ var str = "The answer is: " + num;
 console.log(str); // Output: "The answer is: 42"
 ```
 
-// Difference between NaN, undefined and null
+## Difference between NaN, undefined and null
 * NaN (Not a Number) is a special value that represents an invalid or unreliable result.
 * Undefined is a value that represents an uninitialized or non-existent variable.
 * Null is a value that represents the absence of any object value.
@@ -462,7 +474,7 @@ console.log(typeof undefinedVar); // Output: "undefined"
 console.log(typeof nullVar); // Output: "object"
 ```
 
-// Strict Mode
+## Strict Mode
 Strict mode is a way to opt-in to a restricted variant of JavaScript, which helps to prevent common coding mistakes.
 
 ```javascript
@@ -474,7 +486,7 @@ function strictModeExample() {
 }
 ```
 
-// Functions
+## Functions
 Functions are blocks of code that can be executed multiple times from different parts of the program.
 
 * Function Expression: A function that is defined as an expression, e.g. `var add = function(a, b) { return a + b; }`
@@ -483,8 +495,9 @@ Functions are blocks of code that can be executed multiple times from different 
 * Anonymous Function: A function that is defined without a name, e.g. `function() { console.log("Hello"); }`
 * Callback Function: A function that is passed as an argument to another function, e.g. `setTimeout(function() { console.log("Hello"); }, 1000);`
 
+## Example of Functions
+
 ```javascript
-// Example of Functions
 // Function Expression
 var add = function(a, b) {
   return a + b;
@@ -509,7 +522,7 @@ setTimeout(function() {
 }, 1000);
 ```
 
-// ‘this’ keyword
+## ‘this’ keyword
 The `this` keyword refers to the current object in the execution context.
 
 ```javascript
@@ -525,7 +538,7 @@ var person = {
 person.greet(); // Output: "Hello, my name is John and I am 30 years old."
 ```
 
-// Closures
+## Closures
 A closure is a function that has access to its own scope and the scope of its outer functions.
 
 ```javascript
@@ -545,7 +558,7 @@ var closure = outerFunction();
 closure();
 ```
 
-// IIFE
+## IIFE
 An IIFE (Immediately Invoked Function Expression) is a function that is executed immediately after it is defined.
 
 ```javascript
@@ -555,15 +568,15 @@ An IIFE (Immediately Invoked Function Expression) is a function that is executed
 })();
 ```
 
-// call(), apply() and bind() methods
+## call(), apply() and bind() methods
 These methods are used to call a function with a specific context and arguments.
 
 * `call()`: Calls a function with a specific context and arguments, e.g. `add.call(this, 1, 2);`
 * `apply()`: Calls a function with a specific context and an array of arguments, e.g. `add.apply(this, [1, 2]);`
 * `bind()`: Creates a new function that is bound to a specific context and arguments, e.g. `var boundAdd = add.bind(this, 1, 2);`
 
+## Example of call(), apply() and bind() methods
 ```javascript
-// Example of call(), apply() and bind() methods
 var person = {
   name: "John",
   age: 30
@@ -579,7 +592,7 @@ var boundGreet = greet.bind(person);
 boundGreet("Hello"); // Output: "Hello, my name is John and I am 30 years old."
 ```
 
-// Higher-order functions
+## Higher-order functions
 A higher-order function is a function that takes another function as an argument or returns a function as a result.
 
 ```javascript
@@ -610,7 +623,7 @@ console.log(calculate(5, 2, multiply)); // Output: 10
 console.log(calculate(5, 2, divide)); // Output: 2.5
 ```
 
-// Currying
+## Currying
 Currying is a technique of transforming a function that takes multiple arguments into a sequence of functions, each taking a single argument.
 
 ```javascript
@@ -625,15 +638,15 @@ var add5 = add(5);
 console.log(add5(2)); // Output: 7
 ```
 
-// String, Math and Date objects & methods
+## String, Math and Date objects & methods
 These objects provide various methods for working with strings, numbers and dates.
 
 * String: `length`, `charAt()`, `indexOf()`, `split()`, etc.
 * Math: `PI`, `E`, `pow()`, `sqrt()`, `random()`, etc.
 * Date: `getFullYear()`, `getMonth()`, `getDate()`, `getHours()`, etc.
 
+## Example of String, Math and Date objects & methods
 ```javascript
-// Example of String, Math and Date objects & methods
 // String
 var str = "hello";
 console.log(str.length); // Output: 5
@@ -656,14 +669,14 @@ console.log(date.getDate()); // Output: the current day of the month
 console.log(date.getHours()); // Output: the current hour
 ```
 
-// Array & Object properties and methods
+## Array & Object properties and methods
 These objects provide various methods for working with arrays and objects.
 
 * Array: `length`, `push()`, `pop()`, `shift()`, `unshift()`, etc.
 * Object: `keys()`, `values()`, `entries()`, `hasOwnProperty()`, etc.
 
+## Example of Array & Object properties and methods
 ```javascript
-// Example of Array & Object properties and methods
 // Array
 var arr = [1, 2, 3, 4, 5];
 console.log(arr.length); // Output: 5
@@ -685,15 +698,15 @@ console.log(obj.hasOwnProperty("name")); // Output: true
 console.log(obj.hasOwnProperty("gender")); // Output: false
 ```
 
-// DOM (Events, Properties and Methods)
+## DOM (Events, Properties and Methods)
 The DOM (Document Object Model) is a representation of the structure of a web page.
 
 * Events: `addEventListener()`, `removeEventListener()`, etc.
 * Properties: `innerHTML`, `outerHTML`, `style`, etc.
 * Methods: `createElement()`, `appendChild()`, `removeChild()`, etc.
 
+## Example of DOM (Events, Properties and Methods)
 ```javascript
-// Example of DOM (Events, Properties and Methods)
 // Events
 var button = document.getElementById("myButton");
 button.addEventListener("click", function() {
@@ -713,7 +726,7 @@ document.body.appendChild(newElement);
 document.body.removeChild(newElement);
 ```
 
-// Classes (OO-JS)
+## Classes (OO-JS)
 Classes are a way to define custom objects with their own properties and methods.
 
 ```javascript
@@ -733,7 +746,7 @@ var john = new Person("John", 30);
 john.greet(); // Output: "Hello, my name is John and I am 30 years old."
 ```
 
-// Error Handling
+## Error Handling
 Error handling is the process of catching and handling errors that occur during the execution of a program.
 
 * Try-catch block: `try { } catch (error) { }`
@@ -748,7 +761,7 @@ try {
 }
 ```
 
-// AJAX and Fetch API
+## AJAX and Fetch API
 AJAX (Asynchronous JavaScript and XML) is a technique for making asynchronous requests to a server.
 
 * Fetch API: `fetch()`, `Response`, `Request`, etc.
@@ -761,7 +774,7 @@ fetch('https://api.example.com/data')
   .catch(error => console.log(error));
 ```
 
-// Promises and Asynchronous execution
+## Promises and Asynchronous execution
 Promises are a way to handle asynchronous operations in JavaScript.
 
 * `Promise`: `resolve()`, `reject()`, `then()`, `catch()`, etc.
@@ -779,7 +792,7 @@ promise.then(function(message) {
 });
 ```
 
-// JSON
+## JSON
 JSON (JavaScript Object Notation) is a format for representing data as a string.
 
 * `JSON.parse()`: Parses a JSON string into a JavaScript object.
@@ -796,7 +809,7 @@ var json = JSON.stringify(obj);
 console.log(json); // Output: '{"name":"John","age":30}'
 ```
 
-// Modules
+## Modules
 Modules are a way to organize and reuse code in JavaScript.
 
 * `import`: Imports a module into the current scope.
@@ -820,7 +833,7 @@ console.log(add(5, 2)); // Output: 7
 console.log(subtract(5, 2)); // Output: 3
 ```
 
-// Cookie, localStorage and session storage
+## Cookie, localStorage and session storage
 These are ways to store data locally on the client-side.
 
 * `document.cookie`: Sets or gets a cookie.
@@ -842,7 +855,7 @@ sessionStorage.setItem("name", "John");
 console.log(sessionStorage.getItem("name")); // Output: "John"
 ```
 
-// Browser APIs
+## Browser APIs
 Browser APIs are interfaces that provide access to various browser features.
 
 * `window`: Provides access to the browser window.
@@ -857,8 +870,6 @@ console.log(navigator.userAgent); // Output: the user agent string
 ```
 
 # React
-
-# React Concepts and Examples
 
 ## Virtual DOM and Reconciliation
 
@@ -1405,8 +1416,6 @@ const throttledFunction = throttle(() => {
 }, 500);
 ```
 # NODE JS
-
-# Node.js Concepts
 
 ## Event-Driven and Non-Blocking I/O
 
